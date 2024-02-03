@@ -18,8 +18,10 @@ return new class extends Migration
             $table->foreignId('feature_id')->constrained();
             $table->timestamps();
         });
-    }
 
+        $game = Game::find(1);
+        $game->features()->attach([1, 2, 3]);
+    }
     /**
      * Reverse the migrations.
      */
