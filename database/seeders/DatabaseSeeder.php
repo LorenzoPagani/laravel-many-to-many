@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->call(GameSeeder::class);
+        $this->call(TypeSeeder::class)
+            ->call(FeatureSeeder::class)
+            ->call(GameSeeder::class);
     }
 }
